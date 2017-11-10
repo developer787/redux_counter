@@ -3,4 +3,6 @@ and 1 display for the digit counter~~ :heavy_check_mark:
 
 2- ~~install redux and react-redux~~ :heavy_check_mark:
 
-3- create store
+3- ~~create store~~ :heavy_check_mark
+
+4- create counter reducer

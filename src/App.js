@@ -1,15 +1,24 @@
-import React, { Component } from 'react';
-import Counter from './counter'
-import './App.css';
+import React, { Component } from 'react'
+import {createStore} from 'redux'
+import {Provider, connect} from 'react-redux'
+import store from './store'
+import counter from './counter'
+import './App.css'
+
+
+const mapStateToProps = (state)=> {
+	  return {state}
+}
+const Counter = connect(mapStateToProps)(counter)
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-			  <Counter />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<Provider store={store}>
+			<Counter />
+			</Provider>
+		)
+	}
 }
 
-export default App;
+export default App
