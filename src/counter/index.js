@@ -10,24 +10,14 @@ const displayCounter = score =>(
 )
 
 class Counter extends Component {
-	increment(){
-		alert(8)
-	}
-	decrement(){
-		alert(-8)
-	}
-	score(){
-		return 200
-	}
-
 	render(){
 		const { 
 			score,
 		  increment,
-		  decrement } = this
+		  decrement } = this.props
 		return(
 			<div className="counter">
-			{displayCounter(score())}
+			{displayCounter(score)}
 			{buttons(increment, decrement)}
 			</div>
 		)
