@@ -1,4 +1,21 @@
+.counter {
+	background-color: #aaa;
+	width: 50%;
+	margin: 0 auto;
+	border-style: outset;
+}
+.counter span{
+	background-color: #fff;
+	font-size: 8vmin;
+	border-radius: 5px;
+	border-style: inset;
+}
 .counter button {
+	padding: 3vmin;
+	margin: 3vmin;
+	font-size: 6vmin;
+}
+.counter .score {
 	padding: 3vmin;
 	margin: 3vmin;
 	font-size: 6vmin;

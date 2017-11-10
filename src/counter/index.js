@@ -4,7 +4,9 @@ import buttons from './buttons'
 import './counter.css'
 
 const displayCounter = score =>(
-	<div>Score: {score}</div>
+	<div className="score">
+	  Score: <span>{score}</span>
+	</div>
 )
 
 class Counter extends Component {
