@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {createStore} from 'redux'
 import {Provider, connect} from 'react-redux'
 import store from './store'
 import counter from './counter'
