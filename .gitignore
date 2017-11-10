@@ -3,7 +3,7 @@
 *.sw*
 
 # gitignore
-gitignore
+.gitignore
 # dependencies
 /node_modules
 
