@@ -3,6 +3,7 @@
 	width: 50%;
 	margin: 0 auto;
 	border-style: outset;
+	text-align: center;
 }
 .counter span{
 	background-color: #fff;

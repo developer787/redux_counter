@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 import buttons from './buttons'
-
+import { increment, decrement } from '../store/actions'
 import './counter.css'
+
+const mapStateToProps = (state)=> {
+	return {
+	  score: state.score
+	}
+}
+const mapDispatchToProps = (dispatch)  => ({
+		increment: () => dispatch(increment()),
+		decrement: () => dispatch(decrement())
+});
 
 const displayCounter = score =>(
 	<div className="score">
@@ -23,4 +34,7 @@ class Counter extends Component {
 		)
 	}
 }
-export default Counter
+const counter = connect(
+	mapStateToProps,
+	mapDispatchToProps)(Counter)
+export default counter
