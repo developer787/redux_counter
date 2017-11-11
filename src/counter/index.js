@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import buttons from './buttons'
-import { increment, decrement } from '../store/actions'
+import { 
+	increment, 
+	decrement,
+	asyncrement } from '../store/actions'
 import './counter.css'
 
 const mapStateToProps = (state)=> {
@@ -11,7 +14,8 @@ const mapStateToProps = (state)=> {
 }
 const mapDispatchToProps = (dispatch)  => ({
 		increment: () => dispatch(increment()),
-		decrement: () => dispatch(decrement())
+		decrement: () => dispatch(decrement()),
+		asyncrement: () => dispatch(asyncrement())
 });
 
 const displayCounter = score =>(
@@ -25,11 +29,12 @@ class Counter extends Component {
 		const { 
 			score,
 		  increment,
-		  decrement } = this.props
+		  decrement,
+		  asyncrement } = this.props
 		return(
 			<div className="counter">
 			{displayCounter(score)}
-			{buttons(increment, decrement)}
+			{buttons(increment, decrement, asyncrement)}
 			</div>
 		)
 	}

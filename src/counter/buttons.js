@@ -11,10 +11,18 @@ const substractButton = decrement =>(
 	</button>
 )
 
-const buttons = (increment, decrement) =>(
+const asyncButton = asyncrement =>(
+	<button onClick={asyncrement}>
+     1 sec delay increment
+	</button>
+)
+
+const buttons = (increment, decrement, asyncrement) =>(
 	<div>
 	{addButton(increment)}
 	{substractButton(decrement)}
+	<hr />
+	{asyncButton(asyncrement)}
 	</div>
 )
 export default buttons
